@@ -53,5 +53,8 @@ int main()
     whereever you want. Programming is like canvas, you can draw whatever you want */
     great_grand_child->next = root ;
 
-    printNode(root); /* try printing other nodes too */
+    /* printNode(root); /1* try printing other nodes too *1/ */
+    /* printNode(child); /1* try printing other nodes too *1/ */
+    /* printNode(grand_child); /1* try printing other nodes too *1/ */
+    printNode(great_grand_child); /* try printing other nodes too */
 }

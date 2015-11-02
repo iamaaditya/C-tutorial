@@ -17,7 +17,7 @@ int main() {
 	This statement declares and initializes a string variable s to point to
 	the first of 1000 allocated bytes.
 	*/
-	char *s =  malloc(1000);
+	char *s =  (char *) malloc(1000);
 
 	/*Malloc fails by returning a NULL pointer; always check for this.*/
 	if (s==NULL) {

@@ -3,11 +3,12 @@
 /* Also you will get to see how pointers can be used to store strings */
 
 #include <stdio.h>
+#include <string.h>
 
 /* custom data type */
 struct Addresses {
-    char *firstLine ;
-    char *lastLine ;
+    char firstLine[50] ;
+    char lastLine[50] ;
     /*struct Addresses *WOAh;  */
     /* I am commenting this code. I left it just so that you can remember why we had
     this and how it allowed us to use the struct Addresses which is still under build 
@@ -27,10 +28,9 @@ int main()
 
     struct Addresses address;
 
-    /* sprintf works like printf, in this case you are printing it not to the 
-    screen but to a string varaible */
-    sprintf(address.firstLine, "Brandeis University");
-    sprintf(address.lastLine, "112 South Street");
+    /* use strcpy to copy const string to variable */
+    strcpy(address.firstLine, "Brandeis University");
+    strcpy(address.lastLine, "112 South Street");
     
 
     printAddress(address);

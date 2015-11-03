@@ -1,18 +1,19 @@
-/* Adi - Oct 7, 2014 */
-/* program which shows you size of the pointer varaible for different types */
-
 #include <stdio.h>
 
-int main() {
-    int    *ip;    /* pointer to an integer */
-    double *dp;    /* pointer to a double */
-    float  *fp;    /* pointer to a float */
-    char   *ch;     /* pointer to a character */
+int main(){
+    int i;  // ordinary integer variable
+    int *p; // a pointer variable, which will point to integer 
+            // but remember like I said in class, all pointers are themselves of size int (becuase they store memroy location, an integer value
 
-	/* remember the size of the pointer is always the same,
-	it does not matter what kind of pointer it is */
-    printf("size of int pointer is %lu  \n", sizeof(ip));  // 4
-    printf("size of double pointer is %lu \n" , sizeof(dp)); // 8
-    printf("size of float pointer is %lu \n", sizeof(fp)); // 4
-    printf("size of char pointer is %lu \n", sizeof(ch));  // 1
+    i = 3;  // simple value assignment to a variable
+
+    p = &i; // this step gives the address of variable i to p
+
+    printf("Address of variable i, using i is %p \n", &i);
+    printf("Address of variable i, using p is %p \n", p);
+
+    printf("Value of variable i, using i is %d \n", i);
+    printf("Value of variable i, using p is %d \n", *p);
+
 }
+

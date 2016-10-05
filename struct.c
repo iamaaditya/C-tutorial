@@ -47,7 +47,7 @@ int main()
 
 
     struct node child1;
-    child1.val = 100;
+    child1.val = 9;
     child1.next = root;
 
     printNode(&child1);

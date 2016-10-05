@@ -7,7 +7,8 @@
 /*******************************************************/
 #include <stdio.h>
 #include <stdlib.h>
-#define MaxString 100
+
+#define MaxString 107
 
 /*Define a single-linked list vertex to be a pointer to a structure "vbody"*/
 /*consisting of two fields, vbody.NEXT (of type pointer to vbody)*/

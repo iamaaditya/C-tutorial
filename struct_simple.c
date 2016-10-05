@@ -11,16 +11,16 @@ struct foo
   float y; // a float
 };
 
+typedef struct foo new_type;
 
 int main() {
 	
-	struct foo var;  // var is a variable of type foo which is a construct
+	new_type var;  // var is a variable of type foo which is a construct
 					// hence we have to use the keyword struct
-
-	struct foo* pvar;  // pvar is a pointer which will point to a variable of type foo
-
+	new_type* pvar;  // pvar is a pointer which will point to a variable of type foo
 
 	var.x = 5;
+	var.y = 12.13;
 
 	//(&var)->y = 14.3;    // this is not required, but I left this line
 							// since I showed in class what this does.

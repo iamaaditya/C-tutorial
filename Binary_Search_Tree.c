@@ -23,32 +23,32 @@ int main() {
    root = NULL;
    int index;
 
+   for(index=1;index<10;index++) { 
+       new_node = get_node();
+       new_node->data = index;
+       printf("Inserting -> %d\n", new_node->data);
 
-    for(index=1;index<10;index++) { 
-        new_node = get_node();
-        new_node->data = index;
-
-        if (root == NULL) /* Tree is not Created */
-           root = new_node;
-        else
-           insert(root, new_node);
-    }
+       if (root == NULL) /* Tree is not Created */
+          root = new_node;
+       else
+          insert(root, new_node);
+   }
 
 
-     printf("\nEnter Element to be searched :");
-     scanf("%d", &key);
+    printf("\nEnter Element to be searched :");
+    scanf("%d", &key);
 
-     tmp = search(root, key, &parent);
-     printf("\nParent of node %d is %d", tmp->data, parent->data);
+    tmp = search(root, key, &parent);
+    printf("\nParent of node %d is %d\n", tmp->data, parent->data);
 
-        printf("\nThe Inorder display : ");
-        inorder(root);
-        
-        printf("\nThe Preorder display : ");
-        preorder(root);
+    printf("\nThe In---order display : ");
+    inorder(root);
+    
+    printf("\nThe Pre--order display : ");
+    preorder(root);
 
-        printf("\nThe Postorder display : ");
-        postorder(root);
+    printf("\nThe Post-order display : ");
+    postorder(root);
     
 }
 /*
@@ -106,7 +106,7 @@ node *search(node *root, int key, node **parent) {
 void inorder(node *temp) {
    if (temp != NULL) {
       inorder(temp->lchild);
-      printf("%d", temp->data);
+      printf("%d ", temp->data);
       inorder(temp->rchild);
    }
 }
@@ -115,7 +115,7 @@ void inorder(node *temp) {
  */
 void preorder(node *temp) {
    if (temp != NULL) {
-      printf("%d", temp->data);
+      printf("%d ", temp->data);
       preorder(temp->lchild);
       preorder(temp->rchild);
    }
@@ -128,6 +128,6 @@ void postorder(node *temp) {
    if (temp != NULL) {
       postorder(temp->lchild);
       postorder(temp->rchild);
-      printf("%d", temp->data);
+      printf("%d ", temp->data);
    }
 }

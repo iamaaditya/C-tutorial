@@ -1,6 +1,11 @@
 #include<stdlib.h>
 #include<stdio.h>
 
+struct singly_linke_list {
+   int val;
+   struct singly_linke_list binary_tree *parent;
+};
+
 struct binary_tree {
    int val;
    struct binary_tree * right, * left;
@@ -38,7 +43,7 @@ int main() {
       curr->left = curr->right = NULL;
       curr->val = rand() % 100;
       /* curr->val = i; */
-      insert(&root, curr);
+      /* insert(&root, curr); */
    }
 
    Pre_Order(root);

@@ -11,8 +11,8 @@ int main() {
 
 	/* remember the size of the pointer is always the same,
 	it does not matter what kind of pointer it is */
-    printf("size of int pointer is %lu  \n", sizeof(ip));  // 4
+    printf("size of int    pointer is %lu  \n", sizeof(ip));  // 4
     printf("size of double pointer is %lu \n" , sizeof(dp)); // 8
-    printf("size of float pointer is %lu \n", sizeof(fp)); // 4
-    printf("size of char pointer is %lu \n", sizeof(ch));  // 1
+    printf("size of float  pointer is %lu \n", sizeof(fp)); // 4
+    printf("size of char   pointer is %lu \n", sizeof(ch));  // 1
 }

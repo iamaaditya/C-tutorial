@@ -39,14 +39,17 @@ int main() {
     scanf("%d", &key);
 
     tmp = search(root, key, &parent);
-    printf("\nParent of node %d is ", tmp->data);
-    printf(" %d\n", parent->data);
-    /* printf("\nParent of node %d is %d\n", tmp->data, parent->data); */
+    printf("\nParent of node %d is %d\n", tmp->data, parent->data);
     printf("\nThe In---order display : ");
     inorder(root);
     
     printf("\nThe Pre--order display : ");
     preorder(root);
+   if (temp != NULL) {
+      printf("%d ", temp->data);
+      preorder(temp->lchild);
+      preorder(temp->rchild);
+   }
 
     printf("\nThe Post-order display : ");
     postorder(root);
@@ -115,11 +118,6 @@ void inorder(node *temp) {
  This function displays the tree in preorder fashion
  */
 void preorder(node *temp) {
-   if (temp != NULL) {
-      printf("%d ", temp->data);
-      preorder(temp->lchild);
-      preorder(temp->rchild);
-   }
 }
 
 /*

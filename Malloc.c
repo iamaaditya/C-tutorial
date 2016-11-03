@@ -1,4 +1,5 @@
-/*************************************************************************/
+/print sum(map(float, open(sys.argv[1]).read().splitlines()))
+*************************************************************************/
 /*An example showing how to do dynamic memory allocation with malloc.    */
 /*Ask for n, allocate a string of length n, store the first n characters */
 /*of the alphabet in a string, and then print the string.                */
